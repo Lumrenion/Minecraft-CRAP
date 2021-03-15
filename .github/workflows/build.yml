@@ -1,0 +1,77 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout and get semantic info
+      - uses: actions/checkout@v2
+      - name: Gets semantic release info
+        id: semantic_release_info
+        uses: jossef/action-semantic-release-info@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      
+      # Update files with new version info and release urls
+      - name: Update manifste.json version
+        uses: jossef/action-set-json-field@v1
+        with:
+          file: Modpack/manifest.json
+          field: version
+          value: ${{ steps.semantic_release_info.outputs.git_tag }}
+      - name: Update server-setup-config.yaml modpackUrl
+        run: sed -i "s|\(^  modpackUrl:\).*|\1 https://github.com/Lumrenion/Minecraft-CRAP/archive/${{ steps.semantic_release_info.outputs.git_tag }}.zip|" Serverpack/server-setup-config.yaml
+      
+      # Commit and push file changes
+      - name: Commit files and create tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "docs(): bumping release ${{ steps.semantic_release_info.outputs.git_tag }}"
+          git tag ${{ steps.semantic_release_info.outputs.git_tag }}
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ github.token }}
+          tags: true
+      
+      # Create zip files for release
+      - name: Zip Release Modpack
+        uses: TheDoctor0/zip-release@0.4.1
+        with:
+          filename: modpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip
+          path: .
+          directory: Modpack
+      - name: Zip Release Serverpack
+        uses: TheDoctor0/zip-release@0.4.1
+        with:
+          filename: serverpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip
+          path: .
+          directory: Serverpack
+          
+      # use created zip files for release
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+        with:
+            artifacts: "Modpack/modpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip,Serverpack/serverpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip"
+            tag: ${{ steps.semantic_release_info.outputs.git_tag }}
+            body: ${{ steps.semantic_release_info.outputs.notes }}
+            token: ${{ github.token }}
