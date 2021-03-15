@@ -30,8 +30,8 @@ jobs:
           field: version
           value: ${{ steps.semantic_release_info.outputs.git_tag }}
       - name: Update server-setup-config.yaml modpackUrl
-        run: sed -i "s|\(^  modpackUrl:\).*|\1 https://github.com/Lumrenion/Minecraft-CRAP/archive/modpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip|" Serverpack/server-setup-config.yaml
-      
+        run: sed -i "s|\(^  modpackUrl:\).*|\1 https://github.com/Lumrenion/Minecraft-CRAP/releases/download/${{ steps.semantic_release_info.outputs.git_tag }}/modpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip|" Serverpack/server-setup-config.yaml
+
       # Commit and push file changes
       - name: Commit files and create tag
         run: |
