@@ -1,0 +1,9 @@
+{
+    "biomes": [
+        "minecraft:snowy_tundra",
+	"biomesoplenty:dead_forest",
+	"biomesoplenty:tundra",
+	"biomesoplenty:wasteland",
+	"biomesoplenty:gravel_beach"
+    ]
+}

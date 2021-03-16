@@ -1,0 +1,10 @@
+{
+  "biomes": [
+      "minecraft:dark_forest",
+      "minecraft:dark_forest_hills",
+      "biomesoplenty:coniferous_forest",
+      "biomesoplenty:dead_forest",
+      "biomesoplenty:redwood_forest",
+      "biomesoplenty:withered_abyss"
+  ]
+}

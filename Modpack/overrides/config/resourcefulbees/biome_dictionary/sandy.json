@@ -1,0 +1,12 @@
+{
+  "biomes": [
+      "minecraft:desert",
+      "minecraft:desert_hills",
+      "minecraft:badlands",
+      "minecraft:wooded_badlands_plateau",
+      "minecraft:badlands_plateau",
+      "minecraft:desert_lakes",
+      "biomesoplenty:lush_desert",
+      "biomesoplenty:tropic_beach"
+  ]
+}
