@@ -51,12 +51,25 @@
 	# Add Nether Pyramids to modded Nether biomes.
 	addNetherPyramidToModdedBiomes = true
 	#
+	# How rare are End Pyramid in End biomes.
+	#Range: 1 ~ 1001
+	pyramidEndMaxChunkDistance = 68
+	#
+	# How rare are Icy Pyramid in super cold or icy biomes.
+	# 1 for spawning in most chunks and 1001 for none.
+	#Range: 1 ~ 1001
+	pyramidIcyMaxChunkDistance = 37
+	#
+	# Add Icy Pyramid to modded icy biomes.
+	addPyramidIcyToModdedBiomes = true
+	#
 	# How rare are Badlands Pyramid in non-plateau Badlands biomes.
 	# 1 for spawning in most chunks and 1001 for none.
 	#Range: 1 ~ 1001
 	badlandsPyramidMaxChunkDistance = 37
 	#
-	# Add Snowy Pyramid to modded snowy biomes.
+	# How rare are Snowy Pyramid in snowy biomes.
+	# 1 for spawning in most chunks and 1001 for none.
 	#Range: 1 ~ 1001
 	pyramidSnowyMaxChunkDistance = 37
 	#
@@ -69,6 +82,9 @@
 	# pyramids to spawn in. Separate each ID with a comma ,
 	#   Example: "minecraft:ice_spikes,awesome_mod:awesome_biome"
 	blacklistedPyramidBiomes = " "
+	#
+	# Add End Pyramid to modded end biomes.
+	addPyramidEndToModdedBiomes = true
 	#
 	# Add Badlands Pyramid to modded Badlands biomes.
 	addBadlandsPyramidToModdedBiomes = true
