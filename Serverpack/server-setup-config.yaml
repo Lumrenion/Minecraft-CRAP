@@ -18,7 +18,7 @@ install:
 
   # exact version of forge that is supposed to be used
   # if this value is a null value so ( ~, null, or "" ) then the version from the mod pack is going to be used
-  forgeVersion: 36.0.46
+  forgeVersion: 36.1.4
 
   # If a custom installer is supposed to used, specify the url here: (Otherwise put "", ~ or null here)
   forgeInstallerUrl: ~
