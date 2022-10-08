@@ -48,7 +48,7 @@ install:
   # This supports loading from local files as well for most pack types if there is file://{PathToFile} in the beginning
   # Note: file://{PathToFile} does not need the full path, can be a relative path.
   # E.g: modpackUrl: file://../modpacks/All+the+Mods+7-0.0.21.zip
-  modpackUrl: https://github.com/Lumrenion/Minecraft-CRAP/releases/download/v2.0.1/modpack-v2.0.1.zip
+  modpackUrl: https://github.com/Lumrenion/Minecraft-CRAP/releases/download/v3.0.0/modpack-v3.0.0.zip
 
   # This is used to specify in which format the modpack is distributed, the server launcher has to handle each individually if their format differs
   # current supported formats:
