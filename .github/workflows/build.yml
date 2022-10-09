@@ -23,14 +23,14 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
       
       # Update files with new version info and release urls
-      - name: Update manifste.json version
+      - name: Update manifest.json version
         uses: jossef/action-set-json-field@v1
         with:
           file: Modpack/manifest.json
           field: version
           value: ${{ steps.semantic_release_info.outputs.git_tag }}
-      - name: Update server-setup-config.yaml modpackUrl
-        run: sed -i "s|\(^  modpackUrl:\).*|\1 https://github.com/Lumrenion/Minecraft-CRAP/releases/download/${{ steps.semantic_release_info.outputs.git_tag }}/modpack-${{ steps.semantic_release_info.outputs.git_tag }}.zip|" Serverpack/server-setup-config.yaml
+      - name: Update server.properties version
+        run: sed -i "s|\(^motd=\).*|\1 Minecraft CRAP ${{ steps.semantic_release_info.outputs.git_tag }}|" Serverpack/server.properties
 
       # Commit and push file changes
       - name: Commit files and create tag
