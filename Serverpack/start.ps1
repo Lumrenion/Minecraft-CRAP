@@ -12,7 +12,7 @@ Set-Location "$PSScriptRoot"
 
 $MinecraftVersion = "1.19.2"
 $ModLoader = "Fabric"
-$ModLoaderVersion = "0.14.9"
+$ModLoaderVersion = "0.14.10"
 $JavaArgs = ""
 $Java = "java"
 $LegacyFabricInstallerVersion = "0.11.1"

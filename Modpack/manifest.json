@@ -3,16 +3,16 @@
     "version": "1.19.2",
     "modLoaders": [
       {
-        "id": "fabric-0.14.9",
+        "id": "fabric-0.14.10",
         "primary": true
       }
     ]
   },
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
-  "name": "CRAP3.0",
-  "version": "v3.0.1",
-  "author": "jakey1995abc",
+  "name": "CRAP",
+  "version": "v3.0.2",
+  "author": "lumrenion",
   "files": [
     {
       "projectID": 437443,
@@ -21,17 +21,17 @@
     },
     {
       "projectID": 615134,
-      "fileID": 3903798,
+      "fileID": 4073853,
       "required": true
     },
     {
       "projectID": 306612,
-      "fileID": 4006117,
+      "fileID": 4073289,
       "required": true
     },
     {
       "projectID": 630620,
-      "fileID": 3973121,
+      "fileID": 4026321,
       "required": true
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       "projectID": 332273,
-      "fileID": 3960340,
+      "fileID": 4024431,
       "required": true
     },
     {
@@ -71,7 +71,12 @@
     },
     {
       "projectID": 317780,
-      "fileID": 4010419,
+      "fileID": 4075427,
+      "required": true
+    },
+    {
+      "projectID": 452046,
+      "fileID": 4046700,
       "required": true
     },
     {
@@ -96,7 +101,7 @@
     },
     {
       "projectID": 527685,
-      "fileID": 4015595,
+      "fileID": 4074122,
       "required": true
     },
     {
@@ -116,7 +121,7 @@
     },
     {
       "projectID": 263420,
-      "fileID": 4012614,
+      "fileID": 4075402,
       "required": true
     },
     {
@@ -126,12 +131,12 @@
     },
     {
       "projectID": 440979,
-      "fileID": 3965572,
+      "fileID": 4044025,
       "required": true
     },
     {
       "projectID": 526606,
-      "fileID": 4016195,
+      "fileID": 4074058,
       "required": true
     },
     {
@@ -141,7 +146,7 @@
     },
     {
       "projectID": 238222,
-      "fileID": 3969038,
+      "fileID": 4068187,
       "required": true
     },
     {
@@ -151,7 +156,7 @@
     },
     {
       "projectID": 360438,
-      "fileID": 3923806,
+      "fileID": 4077220,
       "required": true
     },
     {

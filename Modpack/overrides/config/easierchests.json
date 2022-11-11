@@ -1,42 +1,42 @@
 {
   "easierchests.config.enablecolumnbuttons": {
-    "key": "Enable column arrows",
+    "key": "easierchests.config.enablecolumnbuttons",
     "toolTip": "easierchests.config.tt.enablecolumnbuttons",
     "value": false,
     "defaultValue": true
   },
   "easierchests.config.halfsize": {
-    "key": "Half button size",
+    "key": "easierchests.config.halfsize",
     "toolTip": "easierchests.config.tt.halfsize",
     "value": false,
     "defaultValue": false
   },
   "easierchests.config.enablesearch": {
-    "key": "Enable search box",
+    "key": "easierchests.config.enablesearch",
     "toolTip": "easierchests.config.tt.enablesearch",
     "value": true,
     "defaultValue": true
   },
   "easierchests.config.enablerowbuttons": {
-    "key": "Enable row arrows",
+    "key": "easierchests.config.enablerowbuttons",
     "toolTip": "easierchests.config.tt.enablerowbuttons",
     "value": false,
     "defaultValue": true
   },
   "easierchests.config.highlight": {
-    "key": "Highlight color (ARGB)",
+    "key": "easierchests.config.highlight",
     "toolTip": "easierchests.config.tt.highlight",
     "value": "4000ff00",
     "defaultValue": "4000ff00"
   },
   "easierchests.config.transparent": {
-    "key": "Transparent buttons",
+    "key": "easierchests.config.transparent",
     "toolTip": "easierchests.config.tt.transparent",
     "value": true,
     "defaultValue": true
   },
   "easierchests.config.largechests": {
-    "key": "Allow extra large chests",
+    "key": "easierchests.config.largechests",
     "toolTip": "easierchests.config.tt.largechests",
     "value": false,
     "defaultValue": false
